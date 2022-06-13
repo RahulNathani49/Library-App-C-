@@ -16,6 +16,7 @@ namespace Library.Core.Entities
         public string? Borrower { get; set; }
         public DateTime? BorrowDate { get; set; }
         public DateTime? DueDate { get; set; }
+
         public bool Available
         {
             get
@@ -30,7 +31,7 @@ namespace Library.Core.Entities
                 return !Available;
             }
         }
-        public Book(long Id, string Title, string Author, int PageCount, int TimesBorrowed, string Borrower, DateTime BorrowDate, DateTime DueDate)
+        public Book(long Id, string Title, string Author, int PageCount, int TimesBorrowed, string Borrower, DateTime? BorrowDate, DateTime? DueDate)
         {
             this.Id = Id;
             this.Title = Title;
@@ -45,7 +46,7 @@ namespace Library.Core.Entities
             : this(nextId++, Title, Author, PageCount, TimesBorrowed, Borrower, BorrowDate, DueDate)
         { }
         public Book(long Id, Book book)
-            : this(Id, book.Title, book.Author, book.PageCount, book.TimesBorrowed, book.Borrower, (DateTime)book.BorrowDate, (DateTime)book.DueDate)
+            : this(Id, book.Title, book.Author, book.PageCount, book.TimesBorrowed, book.Borrower, book.BorrowDate, book.DueDate)
         { }
         public override string ToString()
         {

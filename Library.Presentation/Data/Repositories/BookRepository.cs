@@ -22,8 +22,94 @@ namespace Data.Repositories
         }
         public bool BookExists(long id)
         {
-            return false;
+
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select count(id) from books where id = " + "@id;";
+            cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            int count = (int)cmd.ExecuteScalar();
+            return count > 0;
+
         }
+        public Book GetBook(long id)
+        {
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select id,title,author,pagecount,TimesBorrowed,borrower,borrowdate,duedate,created,updated from books where id = " + "@id;";
+            cmd.Parameters.Add("@id", SqlDbType.NVarChar).Value = id;
+            SqlDataReader reader = cmd.ExecuteReader();
+            Book book = GetBookFromReader(reader);
+            return book;
+        }
+        public List<Book> GetAllBooks()
+        {
+            List<Book> BooksList = new List<Book>();
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from books";
+            SqlDataReader reader = cmd.ExecuteReader();
+          
+            while (reader.Read())
+            {
+                BooksList.Add(GetBookFromReader(reader));
+            }
+            return BooksList;
+        }
+        public List<Book> GetAvailableBooks()
+        {
+            List<Book> BooksList = new List<Book>();
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from books where BorrowDate IS NULL";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                BooksList.Add(GetBookFromReader(reader));
+            }
+            return BooksList;
+        }
+        public List<Book> GetBorrowedBooks()
+        {
+            List<Book> BooksList = new List<Book>();
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from books where borrowdate IS NOT NULL";
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                BooksList.Add(GetBookFromReader(reader));
+            }
+            return BooksList;
+        }
+        public List<Book> GetBooksByTitle(string titleFilter)
+        {
+            List<Book> BooksList = new List<Book>();
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "select * from books where title like @titlefilter";
+            cmd.Parameters.Add("@titlefilter", SqlDbType.NVarChar).Value = $"%{titleFilter}";
+            return BooksList;
+        }
+
+        private Book GetBookFromReader(SqlDataReader reader)
+        {
+            return new Book(reader.GetInt64(0),    
+                                 reader.GetString(1),
+                                 reader.GetString(2),
+                                 reader.GetInt32(3),
+                                 reader.GetInt32(4),
+                                 reader.GetString(5),
+                                 reader.GetDateTime(6),
+                                 reader.GetDateTime(7)
+                                 );
+        }
+
         public Book CreateBook(Book book)
         {
             using SqlConnection conn = new SqlConnection(connectionString);
@@ -47,19 +133,48 @@ namespace Data.Repositories
         }
         public bool UpdateBook(Book book)
         {
-            return false;
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            DateTime now = DateTime.UtcNow;
+            cmd.CommandText= "update table books set Title = " + book.Title
+                             + ",Author = " + book.Author
+                             + ",PageCount = " + book.PageCount
+                             + ",TimesBorrowed = " + book.TimesBorrowed
+                             + ",Borrower = " + book.Borrower
+                             + ",BorrowDate = " + book.BorrowDate
+                             + ",DueDate = " + book.DueDate
+                             + ",Updated = " +now;
+            int i = cmd.ExecuteNonQuery();
+            return i != 0;
+
         }
         public bool DeleteBook(Book book)
         {
-            return false;
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+
+
+            cmd.CommandText = "DELETE FROM BOOKS WHERE id = " +
+                              "@id;";
+            cmd.Parameters.Add("@id", SqlDbType.BigInt).Value = book.Id;
+
+            int i = cmd.ExecuteNonQuery();
+            return i!=0;
         }
         public bool DeleteBook(long id)
         {
-            return false;
+            using SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            using SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "DELETE FROM BOOKS WHERE id = " +
+                              "@id;";
+            cmd.Parameters.Add("@id", SqlDbType.BigInt).Value = id;
+
+            int i = cmd.ExecuteNonQuery();
+            return i != 0;
         }
 
-
     }
-
-
 }

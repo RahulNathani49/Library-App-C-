@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 namespace Library.Core.Entities
 {
-    internal class Book
+    public class Book
     {
-        public int Id { get; }
+        public long Id { get; }
         private static int nextId = 1001;
         public string Title { get; set; }
         public string Author { get; set; }
@@ -30,7 +30,7 @@ namespace Library.Core.Entities
                 return !Available;
             }
         }
-        public Book(int Id, string Title, string Author, int PageCount, int TimesBorrowed, string Borrower, DateTime BorrowDate, DateTime DueDate)
+        public Book(long Id, string Title, string Author, int PageCount, int TimesBorrowed, string Borrower, DateTime BorrowDate, DateTime DueDate)
         {
             this.Id = Id;
             this.Title = Title;
@@ -44,7 +44,7 @@ namespace Library.Core.Entities
         public Book(string Title, string Author, int PageCount, int TimesBorrowed, string Borrower, DateTime BorrowDate, DateTime DueDate)
             : this(nextId++, Title, Author, PageCount, TimesBorrowed, Borrower, BorrowDate, DueDate)
         { }
-        public Book(int Id, Book book)
+        public Book(long Id, Book book)
             : this(Id, book.Title, book.Author, book.PageCount, book.TimesBorrowed, book.Borrower, (DateTime)book.BorrowDate, (DateTime)book.DueDate)
         { }
         public override string ToString()

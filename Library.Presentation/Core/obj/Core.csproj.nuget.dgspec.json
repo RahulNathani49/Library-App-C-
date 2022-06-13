@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj": {}
+    "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj": {}
   },
   "projects": {
-    "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj": {
+    "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj",
+        "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\isi.751FJW2\\.nuget\\packages\\",
-        "outputPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\obj\\",
+        "outputPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\isi.751FJW2\\AppData\\Roaming\\NuGet\\NuGet.Config",

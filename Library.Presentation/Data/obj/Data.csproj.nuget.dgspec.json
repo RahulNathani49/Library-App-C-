@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Data\\Data.csproj": {}
+    "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Data\\Data.csproj": {}
   },
   "projects": {
-    "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj": {
+    "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj",
+        "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\isi.751FJW2\\.nuget\\packages\\",
-        "outputPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\obj\\",
+        "outputPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\isi.751FJW2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Data\\Data.csproj": {
+    "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Data\\Data.csproj",
+        "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\isi.751FJW2\\.nuget\\packages\\",
-        "outputPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Data\\obj\\",
+        "outputPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\isi.751FJW2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj": {
-                "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj"
+              "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj": {
+                "projectPath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj"
               }
             }
           }
@@ -97,6 +97,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

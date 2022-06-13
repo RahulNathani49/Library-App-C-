@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iewzkwzrU5AkFA3gA8xD+YqoQsWrBgInBclgQCULMcoIJ4rBGU6uk/B8phHaUSVxL37QbpMC/r/uhAxFcw1Lqg==",
+  "dgSpecHash": "Z5NnyexxRUSz7yBxL8XkUZz129/NkTzp7mWkLAV9YF7TVgFB3HR8ILKG3sf0mNcsMue1TQ0XqYz1R97B/BrKzQ==",
   "success": true,
-  "projectFilePath": "C:\\Rahul-Web\\c#\\Exercises\\Library.Presentation\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Rahul-Web\\c#\\Exercises\\Library-Project\\Library.Presentation\\Core\\Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

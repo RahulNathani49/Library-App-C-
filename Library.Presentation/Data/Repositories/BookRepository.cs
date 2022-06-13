@@ -18,7 +18,7 @@ namespace Data.Repositories
         
         public BookRepository()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["LibraryDb"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["LibrarbyDb"].ConnectionString;
         }
         public bool BookExists(long id)
         {

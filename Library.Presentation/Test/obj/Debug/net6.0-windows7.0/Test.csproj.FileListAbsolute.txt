@@ -36,3 +36,14 @@ C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\obj\Debug\ne
 C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\obj\Debug\net6.0-windows7.0\Test.dll
 C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\obj\Debug\net6.0-windows7.0\refint\Test.dll
 C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\obj\Debug\net6.0-windows7.0\Test.pdb
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\Microsoft.Win32.SystemEvents.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\System.Configuration.ConfigurationManager.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\System.Drawing.Common.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\System.Security.Permissions.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\System.Windows.Extensions.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Rahul-Web\c#\Exercises\Library-Project\Library.Presentation\Test\bin\Debug\net6.0-windows7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll

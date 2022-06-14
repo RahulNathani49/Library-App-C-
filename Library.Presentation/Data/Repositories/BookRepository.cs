@@ -117,7 +117,8 @@ namespace Data.Repositories
             using SqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "INSERT INTO BOOKS(Title,Author,PageCount,TimesBorrowed,Borrower,BorrowDate,DueDate,Created,Updated) " +
                               "OUTPUT Inserted.Id " +
-                              "VALUES(@Title, @Author, @PageCount, @TimesBorrowed, @Borrower, @BorrowDate, @DueDate, @Created, @Updated); ";
+                              "VALUES(@Title, @Author, @PageCount, @TimesBorrowed, @Borrower, @BorrowDate, @DueDate, @Created, @Updated);";
+
             cmd.Parameters.Add("@Title", SqlDbType.NVarChar).Value = book.Title;
             cmd.Parameters.Add("@Author", SqlDbType.NVarChar).Value = book.Author;
             cmd.Parameters.Add("@PageCount", SqlDbType.Int).Value = book.PageCount;
@@ -147,7 +148,6 @@ namespace Data.Repositories
                              + ",Updated = " +now;
             int i = cmd.ExecuteNonQuery();
             return i != 0;
-
         }
         public bool DeleteBook(Book book)
         {
